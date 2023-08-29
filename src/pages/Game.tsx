@@ -36,11 +36,7 @@ const Game = () => {
       </div>
 
       <div className="content-game flex flex-col justify-center items-center gap-[60px]">
-        <Result
-          userChoice={userChoice}
-          computerChoice={computerChoice}
-          resetGame={resetGame}
-        />
+        <Result userChoice={userChoice} computerChoice={computerChoice} />
 
         <div
           className={
