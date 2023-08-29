@@ -14,6 +14,9 @@ const Score = ({ result }: ScoreProps) => {
       case "YOU WIN!":
         setUserScore(score);
         break;
+      case "":
+        setUserScore(0);
+        break;
     }
   }, [result]);
 

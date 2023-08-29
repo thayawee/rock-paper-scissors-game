@@ -27,19 +27,19 @@ const UserChoice = ({ userChoice, handleClick }: UserChoiceProps) => {
       <div className="content-user-choice box-border flex justify-center items-center gap-[10px]">
         <div className="flex justify-center items-center border-[1px] border-neutral-600 rounded-full w-[90px] h-[90px]">
           <button onClick={() => handleClick("rock")}>
-            <LiaHandRock className="text-[40px] text-orange-300 hover:text-[60px]" />
+            <LiaHandRock className="text-[40px] text-orange-300 hover:text-[60px] hover:animate-pulse" />
           </button>
         </div>
 
         <div className="flex justify-center items-center border-[1px] border-neutral-600 rounded-full w-[90px] h-[90px]">
           <button onClick={() => handleClick("paper")}>
-            <LiaHandPaper className="text-[40px] text-orange-300 hover:text-[60px]" />
+            <LiaHandPaper className="text-[40px] text-orange-300 hover:text-[60px] hover:animate-pulse" />
           </button>
         </div>
 
         <div className="flex justify-center items-center border-[1px] border-neutral-600 rounded-full w-[90px] h-[90px]">
           <button onClick={() => handleClick("scissors")}>
-            <LiaHandScissors className="transform -scale-x-100 text-[40px] text-orange-300 hover:text-[60px]" />
+            <LiaHandScissors className="transform -scale-x-100 text-[40px] text-orange-300 hover:text-[60px] hover:animate-pulse" />
           </button>
         </div>
       </div>

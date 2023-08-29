@@ -6,17 +6,25 @@ import Result from "../components/Result";
 const Game = () => {
   const [userChoice, setUserChoice] = useState<string>("");
   const [computerChoice, setComputerChoice] = useState<string>("");
+  const [newGame, setNewGame] = useState<boolean>(false);
 
   const choices = ["rock", "paper", "scissors"];
 
   const handleClick = (value: string) => {
     setUserChoice(value);
     generateComputerChoice();
+    setNewGame(true);
   };
 
   const generateComputerChoice = () => {
     const randomChoice = choices[Math.floor(Math.random() * choices.length)];
     setComputerChoice(randomChoice);
+  };
+
+  const resetGame = () => {
+    setNewGame(false);
+    setUserChoice("");
+    setComputerChoice("");
   };
 
   return (
@@ -26,8 +34,14 @@ const Game = () => {
         <p className="font-bold text-[40px]">PAPER</p>
         <p className="font-bold text-[25px] leading-[25px]">SCISSORS</p>
       </div>
+
       <div className="content-game flex flex-col justify-center items-center gap-[60px]">
-        <Result userChoice={userChoice} computerChoice={computerChoice} />
+        <Result
+          userChoice={userChoice}
+          computerChoice={computerChoice}
+          resetGame={resetGame}
+        />
+
         <div
           className={
             computerChoice && userChoice
@@ -38,6 +52,17 @@ const Game = () => {
           <ComputerChoice computerChoice={computerChoice} />
           <UserChoice userChoice={userChoice} handleClick={handleClick} />
         </div>
+
+        {newGame ? (
+          <button
+            onClick={resetGame}
+            className="rounded-[10px] py-[10px] px-[20px] hover:bg-zinc-700 hover:font-bold hover:tracking-[2px] hover:animate-pulse"
+          >
+            NEW GAME
+          </button>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

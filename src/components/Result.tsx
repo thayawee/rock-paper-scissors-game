@@ -4,9 +4,10 @@ import Score from "./Score";
 type ResultProps = {
   userChoice: string;
   computerChoice: string;
+  resetGame: () => void;
 };
 
-const Result = ({ userChoice, computerChoice }: ResultProps) => {
+const Result = ({ userChoice, computerChoice, resetGame }: ResultProps) => {
   const [result, setResult] = useState<string>("");
 
   useEffect(() => {
@@ -26,8 +27,11 @@ const Result = ({ userChoice, computerChoice }: ResultProps) => {
       case "scissorsscissors":
         setResult("DRAW!");
         break;
+      case "":
+        setResult("");
+        break;
     }
-  }, [userChoice, computerChoice]);
+  }, [userChoice, computerChoice, resetGame]);
 
   return (
     <div className="flex flex-col justify-center items-center gap-[20px]">
