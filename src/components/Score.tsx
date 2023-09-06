@@ -24,12 +24,12 @@ const Score = ({ result }: ScoreProps) => {
     <div
       className={
         userScore > 0
-          ? "flex flex-col justify-center items-center gap-[20px] p-[20px] w-[180px] m-auto border-[1px] border-lime-300 rounded-[20px]"
-          : "flex flex-col justify-center items-center gap-[20px] p-[20px] w-[180px] m-auto border-[1px] rounded-[20px]"
+          ? "flex flex-col justify-center items-center gap-[15px] p-[15px] w-[180px] m-auto border-[1px] border-lime-300 rounded-[20px]"
+          : "flex flex-col justify-center items-center gap-[15px] p-[15px] w-[180px] m-auto border-[1px] rounded-[20px]"
       }
     >
-      <h1 className="font-bold text-[20px] uppercase">Score</h1>
-      <p className="font-bold text-[40px] uppercase">{userScore}</p>
+      <h1 className="font-bold text-[18px] uppercase">Score</h1>
+      <p className="font-bold text-[34px] uppercase">{userScore}</p>
     </div>
   );
 };

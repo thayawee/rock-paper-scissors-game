@@ -35,13 +35,13 @@ const Game = () => {
         <p className="font-bold text-[25px] leading-[25px]">SCISSORS</p>
       </div>
 
-      <div className="content-game flex flex-col justify-center items-center gap-[60px]">
+      <div className="content-game flex flex-col justify-center items-center gap-[50px]">
         <Result userChoice={userChoice} computerChoice={computerChoice} />
 
         <div
           className={
             computerChoice && userChoice
-              ? "flex gap-[160px] m-auto mr-[90px]"
+              ? "flex gap-[160px] m-auto mr-[135px]"
               : "flex m-auto"
           }
         >

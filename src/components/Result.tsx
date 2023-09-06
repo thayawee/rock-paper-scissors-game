@@ -35,7 +35,7 @@ const Result = ({ userChoice, computerChoice }: ResultProps) => {
   return (
     <div className="flex flex-col justify-center items-center gap-[20px]">
       <Score result={result} />
-      <p className="font-bold text-[40px] uppercase">{result}</p>
+      <p className="font-bold text-[36px] uppercase">{result}</p>
     </div>
   );
 };
