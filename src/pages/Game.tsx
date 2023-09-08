@@ -29,13 +29,19 @@ const Game = () => {
 
   return (
     <div className="container-game relative box-border border-[1px] rounded-[20px] w-[1000px] p-[40px] pt-[90px] m-auto my-[60px]">
-      <div className="logo-game absolute z-50 top-[-65px] right-[416px] flex flex-col justify-center items-center leading-[40px] rounded-[20px] w-[160px] p-[10px] animate-jump">
+      <div className="logo-game absolute z-50 top-[-65px] right-[419px] flex flex-col justify-center items-center leading-[40px] rounded-[20px] w-[160px] p-[10px] animate-jump">
         <p className="font-bold text-[50px]">ROCK</p>
         <p className="font-bold text-[40px]">PAPER</p>
         <p className="font-bold text-[25px] leading-[25px]">SCISSORS</p>
       </div>
 
-      <div className="content-game flex flex-col justify-center items-center gap-[50px]">
+      <div
+        className={
+          computerChoice && userChoice
+            ? "content-game flex flex-col justify-center items-center gap-[45px]"
+            : "content-game flex flex-col justify-center items-center gap-0"
+        }
+      >
         <Result userChoice={userChoice} computerChoice={computerChoice} />
 
         <div
